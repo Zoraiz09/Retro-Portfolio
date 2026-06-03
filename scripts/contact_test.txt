@@ -1,0 +1,113 @@
+CONSOLE[debug]: [vite] connecting...
+CONSOLE[info]: %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+CONSOLE[debug]: [vite] connected.
+WEB3FORMS HTTP 200
+BODY: {"success":true,"data":{"name":"Browser Test","email":"test@example.com","subject":"[Portfolio] Contact form live test","message":"Automated browser submission confirming the contact terminal delivers email.","from_name":"Browser Test (Portfolio Contact)"},"message":"Form submitted successfully!"}
+RESULT: SUCCESS
+PAGE_SNIPPET:
+Z
+ZORAIZ ARSHAD
+HOME
+ABOUT
+PROJECTS
+STARTUP
+CONTACT
+LET'S TALK
+NEW_MESSAGE // SECURE_CHANNEL
+CONTACT TERMINAL
+— MESSAGE UPLINK
+UPLINK_FORM.EXE
+● SECURE
+✓
+TRANSMISSION SENT
+
+Message delivered to ZORAIZ's inbox. Expect a reply within 48 hours, Browser Test.
+
+SEND ANOTHER
+LOCATION_STATUS
+PESHAWAR, PK
+LOCAL TIME
+GMT+5
+TIMEZONE
+PKT
+RESPONSE
+< 48 HRS
+DIRECT_CHANNELS
+EMAIL
+zoraizarshad987@gmail.com
+GITHUB
+@Zoraiz09
+LINKEDIN
+in/zoraiz-arshad
+
+[sys] Establishing secure uplink to ZORAIZ ARSHAD…
+
+[sys] Handshake complete. Channel encrypted.
+
+[ready] Awaiting transmission ▋
+
+OPEN TO OPPORTUNITIES
+✳
+SYSTEMS ENGINEERING
+✳
+LET'S BUILD SOMETHING
+✳
+AI / ML
+✳
+DISTRIBUTED SYSTEMS
+✳
+OPEN TO OPPORTUNITIES
+✳
+SYSTEMS ENGINEERING
+✳
+LET'S BUILD SOMETHING
+✳
+AI / ML
+✳
+DISTRIBUTED SYSTEMS
+✳
+OPEN TO OPPORTUNITIES
+✳
+SYSTEMS ENGINEERING
+✳
+LET'S BUILD SOMETHING
+✳
+AI / ML
+✳
+DISTRIBUTED SYSTEMS
+✳
+OPEN TO OPPORTUNITIES
+✳
+SYSTEMS ENGINEERING
+✳
+LET'S BUILD SOMETHING
+✳
+AI / ML
+✳
+DISTRIBUTED SYSTEMS
+✳
+Z
+ZORAIZ ARSHAD
+
+Engineering things that hold up under load — and look good doing it.
+
+AVAILABLE FOR WORK
+
+SITEMAP
+
+HOME
+ABOUT
+PROJECTS
+STARTUP
+CONTACT
+
+CHANNELS
+
+→
+GITHUB
+→
+LINKEDIN
+→
+EMAIL
+© 2026 ZORAIZ ARSHAD — BUILT FOR THE CHAOS.
+SYS_ID // ZA-7741-CE

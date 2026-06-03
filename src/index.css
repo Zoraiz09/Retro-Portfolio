@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --grid: rgba(22, 20, 15, 0.05);
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-display;
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 28px 28px;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-coral text-cream;
+  }
+
+  /* Brutalist scrollbar */
+  ::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-cream;
+    border-left: 2px solid #16140f;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ink;
+    border: 3px solid #f4f1e8;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-coral;
+  }
+}
+
+@layer components {
+  /* ── Core brutalist surface ─────────────────────────── */
+  .panel {
+    @apply border-2 border-ink bg-paper shadow-brutal;
+  }
+  .panel-sm {
+    @apply border-2 border-ink bg-paper shadow-brutal-sm;
+  }
+
+  /* ── Monospace eyebrow / system label ───────────────── */
+  .tag {
+    @apply inline-flex items-center gap-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em];
+  }
+
+  /* ── Sticker badge ──────────────────────────────────── */
+  .sticker {
+    @apply inline-flex items-center gap-1.5 border-2 border-ink px-2.5 py-1 font-mono text-[10px]
+      font-bold uppercase tracking-[0.15em] shadow-brutal-sm;
+  }
+
+  /* ── Buttons ────────────────────────────────────────── */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 border-2 border-ink px-5 py-2.5 font-mono
+      text-xs font-bold uppercase tracking-[0.15em] shadow-brutal-sm transition-all duration-100
+      hover:-translate-x-[1px] hover:-translate-y-[1px] hover:shadow-brutal active:translate-x-[2px]
+      active:translate-y-[2px] active:shadow-none;
+  }
+  .btn-coral {
+    @apply btn bg-coral text-cream;
+  }
+  .btn-ink {
+    @apply btn bg-ink text-cream;
+  }
+  .btn-ghost {
+    @apply btn bg-paper text-ink;
+  }
+
+  /* ── Section heading display ────────────────────────── */
+  .display {
+    @apply font-display font-900 leading-[0.92] tracking-[-0.02em];
+  }
+
+  /* dotted divider */
+  .dotted {
+    background-image: radial-gradient(circle, #16140f 1.2px, transparent 1.2px);
+    background-size: 10px 2px;
+    background-repeat: repeat-x;
+  }
+}
+
+@layer utilities {
+  .font-900 {
+    font-weight: 900;
+  }
+  .text-stroke {
+    -webkit-text-stroke: 2px #16140f;
+    color: transparent;
+  }
+  .noise {
+    position: relative;
+  }
+  .noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");
+  }
+}

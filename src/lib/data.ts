@@ -91,6 +91,7 @@ export const capabilities: Capability[] = [
     hashtag: "#AIEngineering",
     related: [
       { label: "CodeSage AI", to: "/projects/ai-code-review-assistant" },
+      { label: "SystemForge", to: "/projects/systemforge-architect" },
       { label: "IRIS", to: "/startup" },
     ],
   },

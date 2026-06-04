@@ -227,8 +227,42 @@ export const projects: Project[] = [
     repo: "https://github.com/Zoraiz09/Distributed-File-Storage-System",
   },
   {
-    slug: "dewy-hydration-tracker",
+    slug: "systemforge-architect",
     index: "03",
+    title: "SystemForge",
+    subtitle: "Describe an app and get an interactive system architecture, with on-demand AI specialists for cost, risk, scaling, and more.",
+    blurb:
+      "An AI architect that turns a one-line idea into an explorable system map — pan/zoom the live diagram, click any node for its stack and dependencies, then summon specialist agents to analyze cost, risk, scaling, and market.",
+    year: "2025",
+    status: "SHIPPED",
+    accent: "bubble",
+    tags: ["AI", "ARCHITECTURE", "NEXT.JS"],
+    stack: ["Next.js 16", "React 19", "TypeScript", "React Flow", "Zustand", "Groq"],
+    summary:
+      "SystemForge turns a one-line product idea into a full, interactive system architecture. An AI Architect (Groq · llama-3.3-70b-versatile) generates the design, rendered as a pan/zoom React Flow canvas where every node exposes its purpose, complexity, recommended stack, and dependencies. On-demand specialist agents — Cost, Risk, Scaling, Roadmap, API, Database, and Startup — run only when asked, with cost and market figures localized for Pakistan. An Architecture Council lets specialists debate a decision (e.g. SQL vs NoSQL) before a Chief Architect delivers a verdict, while a Market & Competition pass surfaces the gap and how to win. Designs are graded on scalability, security, maintainability, and cost, and the whole report exports to PDF. No accounts or tracking — the project lives in sessionStorage and clears with the tab.",
+    highlights: [
+      "AI Architect turns a one-line idea into a full, explorable system architecture.",
+      "Interactive React Flow canvas — pan/zoom a live map; click any node for stack, complexity, and dependencies.",
+      "On-demand specialist agents (Cost, Risk, Scaling, Roadmap, API, Database, Startup) plus an Architecture Council that debates to a verdict.",
+      "Architecture scoring on scalability, security, maintainability, and cost — exportable as a full PDF report.",
+    ],
+    files: [
+      { name: "app/api/", note: "Server-side Groq routes (key never hits the browser)" },
+      { name: "store/", note: "Zustand state for project + agent analyses" },
+      { name: "components/canvas/", note: "React Flow nodes + interactive diagram" },
+    ],
+    metrics: [
+      { label: "AI Agents", value: "7+" },
+      { label: "Model", value: "Groq 70B" },
+      { label: "Export", value: "PDF" },
+    ],
+    arch: ["Idea Prompt", "AI Architect", "React Flow Canvas", "Specialist Agents"],
+    image: "/media/systemforge.webp",
+    repo: "https://github.com/Zoraiz09/SystemForge",
+  },
+  {
+    slug: "dewy-hydration-tracker",
+    index: "04",
     title: "Dewy",
     subtitle: "A glassmorphic, mobile-first water-intake tracker with a periwinkle palette.",
     blurb:
@@ -264,7 +298,7 @@ export const projects: Project[] = [
   },
   {
     slug: "hermes-messenger",
-    index: "04",
+    index: "05",
     title: "Hermes - Messenger",
     subtitle: "A multi-threaded TCP chat system with a polished desktop GUI — direct + group messaging, zero dependencies.",
     blurb:
@@ -298,7 +332,7 @@ export const projects: Project[] = [
   },
   {
     slug: "cashdash-exchange",
-    index: "05",
+    index: "06",
     title: "CashDash",
     subtitle: "A multi-currency exchange & counterparty ledger system for a retail money-exchange shop.",
     blurb:
@@ -332,7 +366,7 @@ export const projects: Project[] = [
   },
   {
     slug: "silicon-ooo-cpu",
-    index: "06",
+    index: "07",
     title: "Silicon",
     subtitle: "A cycle-accurate Tomasulo out-of-order CPU simulator with an interactive, cycle-by-cycle web visualizer.",
     blurb:

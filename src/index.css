@@ -95,6 +95,38 @@
     background-size: 10px 2px;
     background-repeat: repeat-x;
   }
+
+  /* ── Chromatic-aberration glitch on hover ───────────── */
+  .glitch {
+    position: relative;
+  }
+  .glitch:hover {
+    animation: glitch-shadow 0.4s steps(2, end) infinite;
+  }
+}
+
+@keyframes glitch-shadow {
+  0% {
+    text-shadow: 0 0 transparent;
+  }
+  25% {
+    text-shadow: -2px 0 #ff5c46, 2px 0 #a4c7e8;
+  }
+  50% {
+    text-shadow: 2px 0 #ff5c46, -2px 0 #b2d8a6;
+  }
+  75% {
+    text-shadow: -1px -1px #f5c24b, 1px 1px #a4c7e8;
+  }
+  100% {
+    text-shadow: 1px 0 #ff5c46, -1px 0 #a4c7e8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glitch:hover {
+    animation: none;
+  }
 }
 
 @layer utilities {

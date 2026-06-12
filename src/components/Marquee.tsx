@@ -9,8 +9,8 @@ export function Marquee({
 }) {
   const row = [...items, ...items];
   return (
-    <div className={`relative flex overflow-hidden border-y-2 border-ink ${className}`}>
-      <div className={`flex shrink-0 ${speed}`}>
+    <div className={`group relative flex overflow-hidden border-y-2 border-ink ${className}`}>
+      <div className={`flex shrink-0 ${speed} group-hover:[animation-play-state:paused]`}>
         {row.map((item, i) => (
           <span
             key={i}
@@ -21,7 +21,7 @@ export function Marquee({
           </span>
         ))}
       </div>
-      <div className={`flex shrink-0 ${speed}`} aria-hidden>
+      <div className={`flex shrink-0 ${speed} group-hover:[animation-play-state:paused]`} aria-hidden>
         {row.map((item, i) => (
           <span
             key={i}

@@ -2,14 +2,22 @@ import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
+import { ScrollProgress } from "./ScrollProgress";
+import { EasterEggs } from "./EasterEggs";
+import { Terminal } from "./Terminal";
+import { MatrixRain } from "./MatrixRain";
 import { pageVariants } from "./motion";
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
+      <ScrollProgress />
       <div className="flex-1">{children}</div>
       <Footer />
+      <EasterEggs />
+      <Terminal />
+      <MatrixRain />
     </div>
   );
 }

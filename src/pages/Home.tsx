@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Page, Container } from "../components/Layout";
 import { Tag, Reveal, Arrow, GitHubIcon, LinkedInIcon, MailIcon } from "../components/ui";
 import { Marquee } from "../components/Marquee";
+import { Magnetic } from "../components/Magnetic";
 import { riseItem, staggerParent } from "../components/motion";
 import { profile, toolbox, capabilities, projects, accentBg } from "../lib/data";
 
@@ -33,7 +34,7 @@ export function Home() {
               </Tag>
             </motion.div>
 
-            <motion.h1 variants={riseItem} className="display mt-5 text-[13vw] leading-[0.86] sm:text-7xl lg:text-[5.4rem]">
+            <motion.h1 variants={riseItem} className="glitch display mt-5 text-[13vw] leading-[0.86] sm:text-7xl lg:text-[5.4rem]">
               HELLO, I&apos;M
               <br />
               <span className="italic text-rust">ZORAIZ</span> ARSHAD
@@ -47,12 +48,16 @@ export function Home() {
             </motion.p>
 
             <motion.div variants={riseItem} className="mt-8 flex flex-wrap items-center gap-3">
-              <Link to="/projects" className="btn-coral">
-                View Projects <Arrow />
-              </Link>
-              <Link to="/contact" className="btn-ghost">
-                Get In Touch
-              </Link>
+              <Magnetic>
+                <Link to="/projects" className="btn-coral">
+                  View Projects <Arrow />
+                </Link>
+              </Magnetic>
+              <Magnetic>
+                <Link to="/contact" className="btn-ghost">
+                  Get In Touch
+                </Link>
+              </Magnetic>
             </motion.div>
           </div>
 
@@ -142,10 +147,10 @@ export function Home() {
       <Container className="mt-16">
         <Reveal>
           <div className="flex items-end justify-between">
-            <h2 className="display text-4xl sm:text-5xl">
+            <h2 className="glitch display text-4xl sm:text-5xl">
               TOOL<span className="italic text-rust">BOX</span>
             </h2>
-            <Tag className="hidden text-ink/50 sm:flex">_</Tag>
+            <Tag className="hidden text-ink/50 sm:flex">DRAG ME →</Tag>
           </div>
         </Reveal>
         <Reveal className="mt-6">
@@ -153,8 +158,13 @@ export function Home() {
             {toolbox.map((tool, i) => (
               <motion.span
                 key={tool.name}
+                drag
+                dragSnapToOrigin
+                dragElastic={0.35}
+                dragTransition={{ bounceStiffness: 460, bounceDamping: 16 }}
                 whileHover={{ y: -4, rotate: i % 2 ? 2 : -2 }}
-                className={`sticker ${accentBg[tool.accent]} cursor-default text-ink`}
+                whileDrag={{ scale: 1.18, rotate: i % 2 ? 8 : -8, zIndex: 30, cursor: "grabbing" }}
+                className={`sticker ${accentBg[tool.accent]} cursor-grab select-none text-ink`}
               >
                 {tool.name}
               </motion.span>
@@ -167,7 +177,7 @@ export function Home() {
       <Container className="mt-16">
         <Reveal>
           <Tag className="text-ink/50">WHAT I DO // CAPABILITIES</Tag>
-          <h2 className="display mt-3 text-4xl sm:text-5xl">
+          <h2 className="glitch display mt-3 text-4xl sm:text-5xl">
             CORE <span className="italic text-rust">SYSTEMS</span>
           </h2>
         </Reveal>
@@ -199,7 +209,7 @@ export function Home() {
             <div className="grid gap-0 md:grid-cols-[1fr_1.1fr]">
               <div className="border-b-2 border-cream/20 p-8 md:border-b-0 md:border-r-2">
                 <Tag className="text-mustard">PROJECT_ARCHIVE // {projects.length} ENTRIES</Tag>
-                <h2 className="display mt-4 text-4xl sm:text-5xl">
+                <h2 className="glitch display mt-4 text-4xl sm:text-5xl">
                   ENTER THE
                   <br />
                   <span className="italic text-coral">VAULT</span>

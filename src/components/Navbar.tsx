@@ -1,19 +1,36 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useAnimationControls } from "framer-motion";
 import { navLinks } from "../lib/data";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const logoControls = useAnimationControls();
+  const taps = useRef(0);
+
+  // Tapping the logo spins it; a quick 5-tap combo fires a confetti easter egg.
+  const onLogoTap = () => {
+    taps.current += 1;
+    logoControls.start({ rotate: [0, 360], transition: { duration: 0.5, ease: "easeInOut" } });
+    if (taps.current >= 5) {
+      taps.current = 0;
+      window.dispatchEvent(
+        new CustomEvent("easteregg", { detail: "● YOU FOUND THE Z // KEEP DIGGING" }),
+      );
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b-2 border-ink bg-cream/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         {/* Logo */}
-        <Link to="/" className="group flex items-center gap-2.5">
-          <span className="grid h-8 w-8 place-items-center border-2 border-ink bg-coral font-display text-base font-900 text-cream shadow-brutal-sm transition-transform group-hover:rotate-6">
+        <Link to="/" className="group flex items-center gap-2.5" onClick={onLogoTap}>
+          <motion.span
+            animate={logoControls}
+            className="grid h-8 w-8 place-items-center border-2 border-ink bg-coral font-display text-base font-900 text-cream shadow-brutal-sm"
+          >
             Z
-          </span>
+          </motion.span>
           <span className="font-display text-sm font-800 uppercase tracking-[0.12em]">
             Zoraiz Arshad
           </span>
